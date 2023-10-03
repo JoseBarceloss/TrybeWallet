@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { saveEmail } from '../redux/actions'; // Importe a ação apropriada
 
-// Vou comenta bastante no codigo para ficar mais facil de entender.
+// Vou comenta bastante no codigo para ficar mais facil de entender como
 
 function Login() {
   // Estado para armazenar o email e a senha
