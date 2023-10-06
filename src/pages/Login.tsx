@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { saveEmail } from '../redux/actions'; // Importe a ação apropriada
+import { saveEmail } from '../redux/actions/index'; // Importe a ação apropriada
 
 // Vou comenta bastante no codigo para ficar mais facil de entender como
 

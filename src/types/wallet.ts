@@ -1,0 +1,3 @@
+export const ADD_EXPENSE = 'ADD_EXPENSE';
+export const UPDATE_TOTAL = 'UPDATE_TOTAL';
+export const CURRENCY_FETCH = 'CURRENCY_FETCH';
