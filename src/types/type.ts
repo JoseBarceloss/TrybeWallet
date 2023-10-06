@@ -7,18 +7,13 @@ export type CurrencyType = {
 };
 
 export type Expense = {
-  id : number,
-  value : string,
-  description : string,
-  currency : string,
-  method : string,
-  tag : string,
-  exchangeRates: {
-    [key: string]: {
-      code: string,
-      ask: string,
-    }
-  },
+  id: number;
+  value: number;
+  description: string;
+  currency: string;
+  method: string;
+  tag: string;
+  exchangeRates: any;
 };
 
 export type ActionEmailType = {

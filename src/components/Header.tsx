@@ -5,16 +5,17 @@ function Header() {
   const { email } = useSelector((state: StateType) => state.user);
   const { expenses } = useSelector((state: StateType) => state.wallet);
 
-  const sum = expenses.reduce((acc, expense) => {
-    const cotacao = parseFloat(expense.exchangeRates[expense.currency].ask);
-    return acc + parseFloat(expense.value) * cotacao;
-  }, 0);
+  function totalExpenses() {
+    return expenses.reduce((acc, curr) => {
+      return acc + Number(curr.value) * Number(curr.exchangeRates[curr.currency].ask);
+    }, 0).toFixed(2);
+  }
 
   return (
     <div>
       <h3>TrybeWallet</h3>
       <p data-testid="email-field">{email}</p>
-      <p data-testid="total-field">{sum.toFixed(2)}</p>
+      <p data-testid="total-field">{totalExpenses()}</p>
       <p data-testid="header-currency-field">BRL</p>
     </div>
   );
