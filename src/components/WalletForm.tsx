@@ -1,6 +1,5 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
+import { useState, useEffect, ChangeEvent } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Dispatch } from 'redux';
 import { DispatchType, StateType } from '../types/type';
 import { api, apiEncapsu } from '../redux/actions';
 
