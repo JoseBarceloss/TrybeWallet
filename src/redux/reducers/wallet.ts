@@ -1,6 +1,5 @@
 import { AnyAction } from 'redux';
-import { CURRENCY_FETCH } from '../actions';
-import { ADD_EXPENSE, UPDATE_TOTAL } from '../../types/wallet';
+import { ADD_EXPENSE, UPDATE_TOTAL, CURRENCY_FETCH } from '../../types/names';
 
 const INITIAL_STATE = {
   currencies: [],

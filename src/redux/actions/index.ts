@@ -2,8 +2,8 @@ import { Dispatch } from 'redux';
 import { ActionEmailType } from '../../types/type';
 import { ApiCurrency } from '../../ApiFetch';
 
-export const USER_EMAIL = 'USER_EMAIL';
-export const CURRENCY_FETCH = 'CURRENCY_FETCH';
+import { ADD_EXPENSE, UPDATE_TOTAL, DELETE_EXPENSE, USER_EMAIL,
+  CURRENCY_FETCH } from '../../types/names';
 
 export function saveEmail(email: string): ActionEmailType {
   return {
@@ -13,17 +13,22 @@ export function saveEmail(email: string): ActionEmailType {
 }
 
 export const currencySuccess = (currencies: string[]) => ({
-  type: 'CURRENCY_FETCH',
+  type: CURRENCY_FETCH,
   payload: currencies,
 });
 
 export const addExpense = (expense: any) => ({
-  type: 'ADD_EXPENSE',
+  type: ADD_EXPENSE,
   payload: expense,
 });
 
+export const deleteExpense = (id: number) => ({
+  type: DELETE_EXPENSE,
+  payload: id,
+});
+
 export const updateTotal = () => ({
-  type: 'UPDATE_TOTAL',
+  type: UPDATE_TOTAL,
 });
 
 export const api = (form: any) => {
